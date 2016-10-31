@@ -1,0 +1,6 @@
+<Form>
+  <InputField label='Name' id='name' />
+  <InputField label='Email' id='email' />
+
+  <Button>Submit</Button>
+</Form>
