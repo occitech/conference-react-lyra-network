@@ -20,14 +20,24 @@ import preloader from 'spectacle/lib/utils/preloader'
 const images = {
   react: require('../assets/image/react.png'),
   companies: require('../assets/image/companies.png'),
-  lyra: require('../assets/image/lyra.jpg'),
+  lyra_white: require('../assets/image/lyra-white.png'),
+  lyra_color: require('../assets/image/lyra-color.jpg'),
+  occitech: require('../assets/image/occitech.png'),
 }
 
 preloader(images)
 
 export default [
   <Slide key='0-1'>
-    <Image src={images.react.replace('/', '')}/>
+    <Image src={images.react.replace('/', '')} margin='0 auto 80px auto' />
+    <Layout>
+      <Fill>
+        <Image src={images.lyra_white.replace('/', '')} width={200} height={200} />
+      </Fill>
+      <Fill>
+        <Image src={images.occitech.replace('/', '')} width={400} />
+      </Fill>
+    </Layout>
   </Slide>,
   <Slide key='0-2'>
     <Image src={images.react.replace('/', '')} width={200} height={200}/>
@@ -82,6 +92,6 @@ export default [
       REACT, C&#39;EST DU SERIEUX
     </Heading>
     <Image src={images.companies.replace('/', '')} display='block' margin='40px auto'/>
-    <Appear><Image src={images.lyra.replace('/', '')} display='block'/></Appear>
+    <Appear><Image src={images.lyra_color.replace('/', '')} display='block'/></Appear>
   </Slide>,
 ]
