@@ -1,0 +1,16 @@
+const User = (props) => (
+  <div>
+    {props.user.firstname} {props.user.lastname}
+  </div>
+)
+
+export default Relay.createContainer(User, {
+  fragments: {
+    user: () => Relay.QL`
+      fragment on User {
+        firstname
+        lastname
+      }
+    `
+  }
+})

@@ -1,0 +1,13 @@
+import { Router, Route, IndexRoute, browserHistory }
+  from 'react-router'
+
+ReactDOM.render(
+  <Router history={browserHistory}>
+    <Route path="/" component={AppShell}>
+      <IndexRoute component={Home} />
+      <Route path="/users" component={UserList} />
+      <Route path="/users/:id" component={User} />
+    </Route>
+  </Router>,
+  document.getElementById('app')
+)

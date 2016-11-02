@@ -6,8 +6,8 @@ import intro from './0-intro'
 import technique from './1-technique'
 import ecosysteme from './2-ecosysteme'
 import migration from './3-migration'
-import retoursLyra from './4-retours-projets-lyra'
-import frontCommerce from './5-front-commerce'
+import frontCommerce from './4-front-commerce'
+import retoursLyra from './5-retours-projets-lyra'
 import conclusion from './6-conclusion'
 
 require('normalize.css')
@@ -33,8 +33,8 @@ export default class Presentation extends React.Component {
             ...technique,
             ...ecosysteme,
             ...migration,
-            ...retoursLyra,
             ...frontCommerce,
+            ...retoursLyra,
             ...conclusion
           ]}
         </Deck>

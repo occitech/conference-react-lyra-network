@@ -1,6 +1,15 @@
 import React from 'react'
-import {Slide, Heading, Text, Appear, CodePane, List, ListItem} from 'spectacle'
+import {Slide, Heading, Text, Appear, CodePane, List, ListItem, Link, Image} from 'spectacle'
 
+import preloader from 'spectacle/lib/utils/preloader'
+
+const reduxCartoonImage = 'https://cdn-images-1.medium.com/max/800/1*Je2mow8mjYLngXreGGlIEg.png'
+
+const images = {
+  redux: reduxCartoonImage
+}
+
+preloader(images)
 export default [
   <Slide key='2-0'>
     <Heading textColor='secondary' fit caps>
@@ -12,42 +21,49 @@ export default [
       React ce n'est qu'une librairie
     </Text>
     <Appear>
-      <Text textColor='tertiary'>Et donc a besoin d'être complété</Text>
+      <Text textColor='tertiary'>Et donc a besoin d'être complétée</Text>
     </Appear>
   </Slide>,
   <Slide key='2-5-2' notes={`La v2-3 est intéressante mais pas très React.`}>
-    <Text textColor='secondary' lineHeight={2} textSize='2em'>
+    <Text textColor='secondary' textSize='2em'>
       React Router (v4)
     </Text>
-    <Text textColor='tertiary'>
-      Code Example
-    </Text>
+    <CodePane
+      lang='jsx'
+      source={require('raw!../assets/ecosysteme/router.example')}
+      textSize='0.8em'
+    />
     <Appear>
       <Text textColor='tertiary'>
-        Mais c'est alpha :/
+        Mais la v4 casse tout
       </Text>
     </Appear>
   </Slide>,
   <Slide key='2-5-1'>
-    <Text textColor='secondary' lineHeight={2} textSize='2em'>
+    <Text textColor='secondary' textSize='2em'>
       Redux
     </Text>
-    <Text textColor='tertiary'>
-      Schema de mise à jour de Redux
-    </Text>
+    <Image
+      display='block'
+      src={images.redux}
+      margin='1em auto 0'
+    />
+    <Link textSize='0.8em' textColor='secondary' href='https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6' title='A cartoon intro to Redux'>image by Lin Clark</Link>
     <Appear>
       <Text textColor='tertiary'>
-        You might not need Redux
+        <br />You Might Not Need Redux
       </Text>
     </Appear>
   </Slide>,
   <Slide key='2-5-3' notes={`Du style par composant`}>
-    <Text textColor='secondary' lineHeight={2} textSize='2em'>
+    <Text textColor='secondary' textSize='2em'>
       CSS Modules
     </Text>
-    <Text textColor='tertiary'>
-      Code Example
-    </Text>
+    <CodePane
+      lang='jsx'
+      source={require('raw!../assets/ecosysteme/css-modules.example')}
+      textSize='0.8em'
+    />
     <Appear>
       <Text textColor='tertiary'>
         Ou CSS Inline ?
@@ -55,12 +71,14 @@ export default [
     </Appear>
   </Slide>,
   <Slide key='2-5-4' notes={`Des requêtes par composant`}>
-    <Text textColor='secondary' lineHeight={2} textSize='2em'>
+    <Text textColor='secondary' textSize='2em'>
       GraphQL / Relay
     </Text>
-    <Text textColor='tertiary'>
-      Code Example
-    </Text>
+    <CodePane
+      lang='jsx'
+      source={require('raw!../assets/ecosysteme/graphql.example')}
+      textSize='0.8em'
+    />
     <Appear>
       <Text textColor='tertiary'>
         Ou Falcor ?
@@ -71,9 +89,11 @@ export default [
     <Text textColor='secondary' lineHeight={2} textSize='2em'>
       Jest / Snapshot Testing
     </Text>
-    <Text textColor='tertiary'>
-      Code Example
-    </Text>
+    <CodePane
+      lang='jsx'
+      source={require('raw!../assets/ecosysteme/jest.example')}
+      textSize='0.8em'
+    />
     <Appear>
       <Text textColor='tertiary'>
         Ou Enzyme ?
@@ -82,7 +102,7 @@ export default [
   </Slide>,
   <Slide key='2-3-0' notes={`JS Fatigue, Reinventing Best Practices`}>
     <Text textColor='tertiary' lineHeight={2} textSize='2em'>
-      Mais partout il y a des alternatives
+      Partout il y a des alternatives
     </Text>
   </Slide>,
   <Slide key='2-3-1'>
@@ -111,11 +131,13 @@ export default [
   <Slide key='2-4-2'>
     <Text textColor='tertiary' textAlign='left'>Certaines solutions rassemblent les foules</Text>
     <Appear>
-      <Text textColor='tertiary' textAlign='left'>React Router est maître du routing</Text>
+      <Text textColor='tertiary' textAlign='left'>React Router, Redux, React Motion</Text>
     </Appear>
   </Slide>,
   <Slide key='2-4-3'>
     <Text textColor='tertiary' textAlign='left'>La communauté s'entraide beaucoup.</Text>
-    <Text textColor='tertiary' textAlign='left'>La mode est aux codemods et migrations facilitées</Text>
+    <Appear>
+      <Text textColor='tertiary' textAlign='left'>La mode est aux codemods et migrations facilitées</Text>
+    </Appear>
   </Slide>
 ]

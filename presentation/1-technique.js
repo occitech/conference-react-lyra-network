@@ -1,5 +1,6 @@
 import React from 'react'
 import {Slide, Heading, Text, Appear, CodePane, List, ListItem} from 'spectacle'
+import CodeSlide from 'spectacle-code-slide'
 
 export default [
   <Slide key='1-0'>
@@ -53,7 +54,7 @@ export default [
     />
   </Slide>,
   <Slide key='1-1-1-7' notes={`On définit un composant LabelledInput. OSEF de l'implémentation. On veut juste l'utiliser. OSEF de l'implémentation de <<b></b>p>.`}>
-    <Text textColor='tertiary'>Résultat 1 : On se moque des détails d'implémentations</Text>
+    <Text textColor='tertiary'><span style={{color: '#61dafb'}}>Résultat 1 :</span><br />On se moque des détails d'implémentations</Text>
     <Appear>
       <Text textColor='tertiary' textSize='1em'><br />C'est d'ailleurs pour ça qu'on fait du mobile</Text>
     </Appear>
@@ -66,14 +67,11 @@ export default [
     <Appear>
       <Text textColor='tertiary' textSize='1em'>C'est d'ailleurs pour ça qu'on fait de la console</Text>
     </Appear>
-    <Appear>
-      <Text textColor='tertiary' textSize='1em'>Vers l'infini et au delà</Text>
-    </Appear>
   </Slide>,
   <Slide key='1-1-1-8' notes={`Affichage déterministe => On a toujours la même chose on se moque de la transition`}>
-    <Text textColor='tertiary' lineHeight={2}>Résultat 2 : c'est maintenable</Text>
+    <Text textColor='tertiary'><span style={{color: '#61dafb'}}>Résultat 2 :</span><br />C'est maintenable</Text>
     <Appear>
-      <Text textColor='quartenary'>UI = f(props, state)</Text>
+      <Text textColor='quartenary'><br />UI = f(props, state)</Text>
     </Appear>
   </Slide>,
   <Slide key='1-1-1-9' notes={`Une appli à la JQuery`}>
@@ -87,7 +85,7 @@ export default [
       Approche par composant
     </Text>
     <Appear>
-      <Text textColor='tertiary' lineHeight={2}>
+      <Text textColor='quartenary' lineHeight={2}>
         React ce n'est <strong>pas</strong> le V de MVC
       </Text>
     </Appear>
@@ -110,34 +108,41 @@ export default [
       Show me the code
     </Text>
   </Slide>,
-  <Slide key='1-1-3-0'>
-    <Text textColor='tertiary'>Stateless Components</Text>
-    <CodePane
-      textAlign='left'
-      lang='jsx'
-      source={require('raw!../assets/technique/stateless.example')}
-      margin='2em auto'
-      textSize='0.8em'
-      bgColor='#3e3e3e'
-    />
-  </Slide>,
-  <Slide key='1-1-3-0'>
-    <Text textColor='tertiary'>Stateful Component</Text>
-    <CodePane
-      textAlign='left'
-      lang='jsx'
-      source={require('raw!../assets/technique/stateful.example')}
-      margin='2em auto'
-      textSize='0.8em'
-      bgColor='#3e3e3e'
-    />
-  </Slide>,
+  <CodeSlide
+    key='1-1-3-1'
+    transition={[]}
+    lang='jsx'
+    code={require('raw!../assets/technique/stateless.example')}
+    ranges={[
+      {loc: [0, 4]},
+      {loc: [0, 1]},
+      {loc: [1, 2]},
+      {loc: [2, 3]},
+      {loc: [0, 4]},
+      {loc: [5, 10]},
+      {loc: [5, 6]},
+      {loc: [6, 9]},
+      {loc: [11, 12]},
+      {loc: [12, 19]},
+      {loc: [33, 34]},
+      {loc: [34, 39]},
+      {loc: [20, 21]},
+      {loc: [21, 31]},
+      {loc: [26, 30]},
+      {loc: [33, 34]},
+      {loc: [40, 41]},
+      {loc: [11, 43]}
+    ]}
+  />,
   <Slide key='1-1-3-0' notes={`Procédural => Fonctionnel (Immutabilité, Composition, ...)<br /> React fait découvrir les bonnes pratiques`}>
-    <Text textColor='tertiary' lineHeight={2}>
+    <Text textColor='tertiary'>
       L'API n'est pas beaucoup plus épaisse
     </Text>
     <Appear>
-      <Text textColor='tertiary'>Mais il faut s'approprier le <strong>paradigme</strong></Text>
+      <Text textColor='tertiary'><br />Mais il faut s'approprier le <strong>paradigme</strong></Text>
+    </Appear>
+    <Appear>
+      <Text textColor='tertiary'><br />Procédural => Fonctionnel</Text>
     </Appear>
   </Slide>,
 ]
