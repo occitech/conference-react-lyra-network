@@ -1,10 +1,43 @@
+ReactDOM.render(
+  <Hello name='Jim' />,
+  document.getElementById('root')
+)
+
 const Hello = (props) => {
   return <p>
     Hello {props.name || 'world'} !
   </p>
 }
 
-ReactDOM.render(
-  <Hello name='Jim' />,
-  document.getElementById('root')
-)
+class Hello extends React.Component {
+  constructor () {
+    super()
+    this.state = {
+      loading: true,
+      name: null
+    }
+  }
+
+  componentWillMount () {
+    fetch('/me')
+      .then(
+        (response) => response.json()
+      )
+      .then(
+        (me) => this.setState({
+          loading: false,
+          name: me.name
+        })
+      )
+  }
+
+  render () {
+    if (this.state.loading) {
+      return (
+        <p>Scan rétinien...</p>
+      )
+    }
+
+    return <p>{this.state.name}</p>
+  }
+}

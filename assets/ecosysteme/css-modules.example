@@ -1,0 +1,15 @@
+// Button.css
+.button {
+  background: red;
+  color: green;
+  border: 2px solid blue;
+}
+
+// Button.js
+import styles from "./Button.css";
+
+const Button = (props) => (
+  <button className={styles.button} onClick={props.onClick}>
+    {props.children}
+  </button>
+)

@@ -1,0 +1,8 @@
+test('Link changes the class when hovered', () => {
+  const component = renderer.create(
+    <Link to="http://occitech.fr">Occitech</Link>
+  )
+
+  let tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
+});
