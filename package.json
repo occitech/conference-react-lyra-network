@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "lyra-react",
   "version": "0.1.0",
   "description": "Présentations données à Lyra Network sur le thème de React",
@@ -8,7 +7,7 @@
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
+    "deploy": "echo todo",
     "start": "cross-env NODE_ENV=development node server.js",
     "lint:fix": "standard --fix"
   },
@@ -51,10 +50,10 @@
     "rimraf": "^2.4.4",
     "standard": "^8.5.0",
     "style-loader": "^0.13.0",
-    "surge": "latest",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.8",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.5.0"
-  }
+  },
+  "license": "GPL v3"
 }
