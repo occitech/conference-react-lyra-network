@@ -1,0 +1,31 @@
+class Hello extends React.Component {
+  constructor () {
+    super()
+    this.state = {
+      loading: true,
+      name: null
+    }
+  }
+
+  componentWillMount () {
+    fetch('/me')
+      .then((response) => response.json())
+      .then((me) => this.setState({
+        loading: false,
+        name: me.name
+      }))
+      .catch(/* Handle error */)
+  }
+
+  componentWillUnmount () {
+    /* Abort request */
+  }
+
+  render () {
+    if (this.state.loading) {
+      return <p>Scan rétinien en cours...</p>
+    }
+
+    return <p>{this.state.name}</p>
+  }
+}

@@ -1,6 +1,6 @@
 <Form>
-  <InputField label='Name' id='name' />
-  <InputField label='Email' id='email' />
+  <LabelledInput label='Name' id='name' />
+  <LabelledInput label='Email' id='email' />
 
   <Button>Submit</Button>
 </Form>

@@ -1,0 +1,10 @@
+const Hello = (props) => {
+  return <p>
+    Hello {props.name || 'world'} !
+  </p>
+}
+
+ReactDOM.render(
+  <Hello name='Jim' />,
+  document.getElementById('root')
+)
