@@ -29,13 +29,13 @@ preloader(images)
 
 export default [
   <Slide key='0-1'>
-    <Image src={images.react.replace('/', '')} margin='0 auto 80px auto' />
+    <Image src={images.react.replace('/', '')} />
     <Layout>
       <Fill>
-        <Image src={images.lyra_white.replace('/', '')} width={200} height={200} />
+        <Image src={images.occitech.replace('/', '')} width={400} margin='130px auto 0 auto' />
       </Fill>
       <Fill>
-        <Image src={images.occitech.replace('/', '')} width={400} />
+        <Image src={images.lyra_white.replace('/', '')} width={200} height={200} margin='80px auto 0 auto' />
       </Fill>
     </Layout>
   </Slide>,
