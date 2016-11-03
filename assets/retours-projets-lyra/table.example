@@ -1,0 +1,6 @@
+<Table  headers={headers}
+        getRows={verificationRequests.getRows}
+        templateLineClass={VerificationRequestLine}
+        handleClickLine={this.handleClickLine}
+        selectable={isSelectable}
+        selectLineMaxCount={config.requestMaxSelection} />
