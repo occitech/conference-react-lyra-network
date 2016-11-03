@@ -4,11 +4,12 @@
   "description": "Présentations données à Lyra Network sur le thème de React",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "standard",
-    "deploy": "echo todo",
-    "start": "cross-env NODE_ENV=development node server.js",
+    "deploy": "now",
+    "prestart": "npm run build",
+    "start": "cross-env HOST=0.0.0.0 node server.js",
+    "dev": "cross-env NODE_ENV=development node server.js",
     "lint:fix": "standard --fix"
   },
   "repository": {
@@ -46,6 +47,7 @@
     "is-buffer": "^1.1.1",
     "markdown-loader": "^0.1.7",
     "node-libs-browser": "^0.5.3",
+    "now": "^0.28.0",
     "raw-loader": "^0.5.1",
     "react-transform-hmr": "^1.0.4",
     "rimraf": "^2.4.4",

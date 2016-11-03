@@ -6,7 +6,7 @@ The Spectacle core API is available at [https://github.com/FormidableLabs/specta
 
 ## Development
 
-To start up the local server, run `npm start`
+To start up the local server, run `npm run dev`
 
 Open a browser and hit [http://localhost:5000](http://localhost:5000), and we are ready to roll
 

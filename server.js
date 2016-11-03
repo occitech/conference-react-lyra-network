@@ -9,6 +9,7 @@ var app = express();
 var compiler = webpack(config);
 
 var serverPort = process.env.PORT || 5000;
+var serverHost = process.env.HOST || "localhost";
 
 app.use(require("webpack-dev-middleware")(compiler, {
   noInfo: true,
@@ -21,7 +22,7 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.listen(serverPort, "localhost", function (err) {
+app.listen(serverPort, serverHost, function (err) {
   if (err) {
     console.log(err);
     return;
