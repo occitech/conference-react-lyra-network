@@ -3,15 +3,9 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
-const Hello = (props) => {
-  return <p>
-    Hello {props.name || 'world'} !
-  </p>
-}
-
 class Hello extends React.Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       loading: true,
       name: null
@@ -19,6 +13,10 @@ class Hello extends React.Component {
   }
 
   componentWillMount () {
+    // ...
+  }
+
+  componentDidMount () {
     fetch('/me')
       .then(
         (response) => response.json()
@@ -40,4 +38,18 @@ class Hello extends React.Component {
 
     return <p>{this.state.name}</p>
   }
+}
+
+class Hello extends React.Component {
+  render () {
+    return <p>
+      Hello {props.name || 'world'} !
+    </p>
+  }
+}
+
+const Hello = (props) => {
+  return <p>
+    Hello {props.name || 'world'} !
+  </p>
 }

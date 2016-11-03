@@ -6,15 +6,65 @@ import {
   Appear,
   CodePane,
   List,
-  ListItem
+  ListItem,
+  Image
 } from 'spectacle'
 import CodeSlide from 'spectacle-code-slide'
+import preloader from 'spectacle/lib/utils/preloader'
+
+const images = {
+  declaratif: require('../assets/image/declaratif.png'),
+  imperatif: require('../assets/image/imperatif.png'),
+  application: require('../assets/image/application.png')
+}
+preloader(images)
 
 export default [
   <Slide key='1-0'>
     <Heading textColor='secondary' fit caps>
       Point technique
     </Heading>
+  </Slide>,
+  <Slide key='1-1-3-0'>
+    <Text textColor='tertiary'>
+      Commençons par du code
+    </Text>
+  </Slide>,
+  <CodeSlide
+    key='1-1-3-1'
+    transition={[]}
+    lang='jsx'
+    code={require('raw!../assets/technique/stateless.example')}
+    ranges={[
+      {loc: [0, 4]},
+      {loc: [1, 2]},
+      {loc: [2, 3]},
+      {loc: [0, 4]},
+      {loc: [5, 6]},
+      {loc: [6, 8]},
+      {loc: [8, 12]},
+      {loc: [6, 13]},
+      {loc: [14, 17]},
+      {loc: [31, 32]},
+      {loc: [32, 37]},
+      {loc: [18, 19]},
+      {loc: [19, 29]},
+      {loc: [24, 28]},
+      {loc: [31, 40]},
+      {loc: [42, 49]},
+      {loc: [50, 55]}
+    ]}
+  />,
+  <Slide key='1-1-3-0' notes={`Procédural => Fonctionnel (Immutabilité, Composition, ...)<br /> React fait découvrir les bonnes pratiques`}>
+    <Text textColor='tertiary'>
+      L'API n'est pas beaucoup plus épaisse
+    </Text>
+    <Appear>
+      <Text textColor='tertiary'><br />Mais il faut s'approprier le <strong>paradigme</strong></Text>
+    </Appear>
+    <Appear>
+      <Text textColor='tertiary'><br />Procédural => Fonctionnel</Text>
+    </Appear>
   </Slide>,
   <Slide key='1-1-1-0'>
     <Text textSize='2em' textColor='tertiary'>
@@ -83,10 +133,12 @@ export default [
     </Appear>
   </Slide>,
   <Slide key='1-1-1-9' notes={`Une appli à la JQuery`}>
-    <Text textColor='tertiary'>Schema Impératif</Text>
+    <Image src={images.imperatif} width='60%' />
+    <Text textColor='tertiary' textSize='0.8em' margin='1em auto'>Schema Impératif</Text>
   </Slide>,
   <Slide key='1-1-1-11' notes={`Une appli React`}>
-    <Text textColor='tertiary'>Schema Déclaratif</Text>
+    <Image src={images.declaratif} width='80%' />
+    <Text textColor='tertiary' textSize='0.8em' margin='1em auto'>Schema Déclaratif</Text>
   </Slide>,
   <Slide key='1-1-2-0'>
     <Text textColor='tertiary' textSize='2em'>
@@ -99,7 +151,8 @@ export default [
     </Appear>
   </Slide>,
   <Slide key='1-1-2-1'>
-    <Text textColor='tertiary'>Schema Application</Text>
+    <Image src={images.application} width='80%' />
+    <Text textColor='tertiary' textSize='0.8em' margin='1em auto'>Schema Application</Text>
   </Slide>,
   <Slide key='1-1-2-2' notes={`On me dit que pour les grosses applis, ce n'est pas maintenable. Mais en fait on réduit la complexité.`}>
     <Text textColor='tertiary'>
@@ -109,48 +162,6 @@ export default [
       <Text textColor='tertiary'>
         On a <strong>plusieurs</strong> petites applications
       </Text>
-    </Appear>
-  </Slide>,
-  <Slide key='1-1-3-0'>
-    <Text textColor='tertiary'>
-      Show me the code
-    </Text>
-  </Slide>,
-  <CodeSlide
-    key='1-1-3-1'
-    transition={[]}
-    lang='jsx'
-    code={require('raw!../assets/technique/stateless.example')}
-    ranges={[
-      {loc: [0, 4]},
-      {loc: [0, 1]},
-      {loc: [1, 2]},
-      {loc: [2, 3]},
-      {loc: [0, 4]},
-      {loc: [5, 10]},
-      {loc: [5, 6]},
-      {loc: [6, 9]},
-      {loc: [11, 12]},
-      {loc: [12, 19]},
-      {loc: [33, 34]},
-      {loc: [34, 39]},
-      {loc: [20, 21]},
-      {loc: [21, 31]},
-      {loc: [26, 30]},
-      {loc: [33, 34]},
-      {loc: [40, 41]},
-      {loc: [11, 43]}
-    ]}
-  />,
-  <Slide key='1-1-3-0' notes={`Procédural => Fonctionnel (Immutabilité, Composition, ...)<br /> React fait découvrir les bonnes pratiques`}>
-    <Text textColor='tertiary'>
-      L'API n'est pas beaucoup plus épaisse
-    </Text>
-    <Appear>
-      <Text textColor='tertiary'><br />Mais il faut s'approprier le <strong>paradigme</strong></Text>
-    </Appear>
-    <Appear>
-      <Text textColor='tertiary'><br />Procédural => Fonctionnel</Text>
     </Appear>
   </Slide>
 ]

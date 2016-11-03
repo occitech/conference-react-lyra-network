@@ -8,6 +8,12 @@ import {
   ListItem,
   Image
 } from 'spectacle'
+import preloader from 'spectacle/lib/utils/preloader'
+
+const images = {
+  storybook: 'https://github.com/kadirahq/react-storybook/raw/master/docs/demo.gif'
+}
+preloader(images)
 
 export default [
   <Slide key='3-0'>
@@ -34,7 +40,7 @@ export default [
     </Text>
   </Slide>,
   <Slide key='3-1-4' notes={`Si des bouts sont liés`}>
-    <Text textColor='tertiary' lineHeight={2}>
+    <Text textColor='secondary' textSize='2em' lineHeight={1}>
       Quand l'utiliser ?
     </Text>
     <List textColor='tertiary'>
@@ -56,19 +62,10 @@ export default [
     </List>
   </Slide>,
   <Slide key='3-2-0' notes={`Exemple appli cartographie => Gain notamment sur la mise à jour des options disponibles. Y compris par rapport au niveau de zoom`}>
-    <Text textColor='tertiary'>Migration de l'UI d'une cartographie</Text>
-    <Text textColor='tertiary'><br />Schema</Text>
-  </Slide>,
-  <Slide key='3-2-1' notes={`Exemple appli cartographie`}>
-    <Text textColor='tertiary'>Migration progressive</Text>
-    <List textColor='tertiary'>
-      <Appear><ListItem>Tooltips</ListItem></Appear>
-      <Appear><ListItem>Données à afficher</ListItem></Appear>
-      <Appear><ListItem>Choix de l'imagerie</ListItem></Appear>
-    </List>
-  </Slide>,
-  <Slide key='3-2-2' notes={`Pas besoin donc on ne va pas trop loin`}>
-    <Text textColor='tertiary'>L'application finale n'est pas un seul composant React</Text>
+    <Text textColor='tertiary'><br />Une application migrée n'est pas forcément<br /><strong>un seul</strong> composant React</Text>
+    <Appear>
+      <Text textColor='tertiary'><br />Mettez du React là où ça vous apporte de la valeur</Text>
+    </Appear>
   </Slide>,
   <Slide key='3-3-0' notes={`Quelques bonnes pratiques`}>
     <Heading textColor='secondary' fit caps>Quelques bonnes pratiques</Heading>
@@ -101,11 +98,17 @@ export default [
     </Appear>
     <Appear>
       <Image
-        src='https://github.com/kadirahq/react-storybook/raw/master/docs/demo.gif'
+        src={images.storybook}
         display='block'
         width='80%'
         margin='1em auto 0'
       />
+    </Appear>
+  </Slide>,
+  <Slide key='3-3-3' notes={`Développez vos composants de manière isolée`}>
+    <Text textColor='tertiary' textSize='2em'>Utilisez les bonnes pratiques que vous connaissez déjà</Text>
+    <Appear>
+      <Text textColor='quartenary'><br />Adapteurs, Facades, ...</Text>
     </Appear>
   </Slide>
 ]

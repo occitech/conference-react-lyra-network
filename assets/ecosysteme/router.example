@@ -1,13 +1,17 @@
-import { Router, Route, IndexRoute, browserHistory }
-  from 'react-router'
+const App = () => (
+  <Router>
+    <Layout>
+      <Header />
+      <Match exactly pattern="/" component={Home} />
+      <Match pattern="/topics" component={Topics} />
+      <Footer />
+    </Layout>
+  </Router>
+)
 
-ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path="/" component={AppShell}>
-      <IndexRoute component={Home} />
-      <Route path="/users" component={UserList} />
-      <Route path="/users/:id" component={User} />
-    </Route>
-  </Router>,
-  document.getElementById('app')
+const Topics = () => (
+  <Content>
+    <Match pattern={props.pathname} component={TopicList} />
+    <Match pattern={`${props.pathname}/:id`} component={TopicList} />
+  </Content>
 )

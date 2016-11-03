@@ -3,7 +3,9 @@ import {
   Slide,
   Heading,
   Text,
-  Appear
+  Appear,
+  List,
+  ListItem
 } from 'spectacle'
 
 export default [
@@ -18,15 +20,19 @@ export default [
     </Appear>
   </Slide>,
   <Slide key='4-1'>
-    <Text textColor='tertiary'>Pourquoi React ?</Text>
+    <Text textColor='secondary' textSize='2em'>Pourquoi React ?</Text>
+    <List>
+      <Appear><ListItem textColor='tertiary'>Facilité d'extension</ListItem></Appear>
+      <Appear><ListItem textColor='tertiary'>Testabilité</ListItem></Appear>
+      <Appear><ListItem textColor='tertiary'>Réutilisabilité</ListItem></Appear>
+    </List>
   </Slide>,
   <Slide key='4-2'>
-    <Text textColor='tertiary'>Pourquoi Falcor ?</Text>
-  </Slide>,
-  <Slide key='4-2'>
-    <Text textColor='tertiary'>Comment mutualiser le code ?</Text>
-  </Slide>,
-  <Slide key='4-2'>
-    <Text textColor='tertiary'>Comment gérer le multi-thème ?</Text>
+    <Text textColor='secondary' textSize='2em'>Pourquoi Falcor ?</Text>
+    <List>
+      <Appear><ListItem textColor='tertiary'>Performances</ListItem></Appear>
+      <Appear><ListItem textColor='tertiary'>Orienté composant</ListItem></Appear>
+      <Appear><ListItem textColor='tertiary'>Multi API</ListItem></Appear>
+    </List>
   </Slide>
 ]

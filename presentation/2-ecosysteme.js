@@ -8,7 +8,6 @@ import {
   Link,
   Image
 } from 'spectacle'
-
 import preloader from 'spectacle/lib/utils/preloader'
 
 const reduxCartoonImage = 'https://cdn-images-1.medium.com/max/800/1*Je2mow8mjYLngXreGGlIEg.png'
@@ -24,44 +23,31 @@ export default [
       L'écosystème
     </Heading>
   </Slide>,
-  <Slide key='2-1' notes={`ex: Pas pertinent de comparer à Angular.`}>
+  <Slide key='2-1'>
     <Text textColor='tertiary' lineHeight={2}>
       React ce n'est qu'une librairie
     </Text>
     <Appear>
-      <Text textColor='tertiary'>Et donc a besoin d'être complétée</Text>
+      <Text textColor='tertiary'>Il va la falloir le compléter</Text>
     </Appear>
   </Slide>,
-  <Slide key='2-5-2' notes={`La v2-3 est intéressante mais pas très React.`}>
+  <Slide key='2-1'>
+    <Text textColor='tertiary' lineHeight={2}>
+      Tout <strong>composant</strong>-iser
+    </Text>
+    <Appear>
+      <Text textColor='tertiary'>Regrouper les besoins du composant dans le composant</Text>
+    </Appear>
+  </Slide>,
+  <Slide key='2-5-2'>
     <Text textColor='secondary' textSize='2em'>
       React Router (v4)
     </Text>
     <CodePane
       lang='jsx'
       source={require('raw!../assets/ecosysteme/router.example')}
-      textSize='0.8em'
+      textSize='0.7em'
     />
-    <Appear>
-      <Text textColor='tertiary'>
-        Mais la v4 casse tout
-      </Text>
-    </Appear>
-  </Slide>,
-  <Slide key='2-5-1'>
-    <Text textColor='secondary' textSize='2em'>
-      Redux
-    </Text>
-    <Image
-      display='block'
-      src={images.redux}
-      margin='1em auto 0'
-    />
-    <Link textSize='0.8em' textColor='secondary' href='https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6' title='A cartoon intro to Redux'>image by Lin Clark</Link>
-    <Appear>
-      <Text textColor='tertiary'>
-        <br />You Might Not Need Redux
-      </Text>
-    </Appear>
   </Slide>,
   <Slide key='2-5-3' notes={`Du style par composant`}>
     <Text textColor='secondary' textSize='2em'>
@@ -72,11 +58,6 @@ export default [
       source={require('raw!../assets/ecosysteme/css-modules.example')}
       textSize='0.8em'
     />
-    <Appear>
-      <Text textColor='tertiary'>
-        Ou CSS Inline ?
-      </Text>
-    </Appear>
   </Slide>,
   <Slide key='2-5-4' notes={`Des requêtes par composant`}>
     <Text textColor='secondary' textSize='2em'>
@@ -87,11 +68,6 @@ export default [
       source={require('raw!../assets/ecosysteme/graphql.example')}
       textSize='0.8em'
     />
-    <Appear>
-      <Text textColor='tertiary'>
-        Ou Falcor ?
-      </Text>
-    </Appear>
   </Slide>,
   <Slide key='2-5-5' notes={`Tester ses composants`}>
     <Text textColor='secondary' lineHeight={2} textSize='2em'>
@@ -102,9 +78,21 @@ export default [
       source={require('raw!../assets/ecosysteme/jest.example')}
       textSize='0.8em'
     />
+  </Slide>,
+  <Slide key='2-5-1'>
+    <Text textColor='secondary' textSize='2em'>
+      Redux
+    </Text>
+    <Image
+      display='block'
+      src={images.redux}
+      margin='1em auto 0'
+      width='70%'
+    />
+    <Link textSize='0.8em' textColor='secondary' href='https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6' title='A cartoon intro to Redux'>image by Lin Clark</Link>
     <Appear>
-      <Text textColor='tertiary'>
-        Ou Enzyme ?
+      <Text textColor='quartenary'>
+        <br />You Might Not Need Redux
       </Text>
     </Appear>
   </Slide>,
