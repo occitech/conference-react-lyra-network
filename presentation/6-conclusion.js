@@ -2,14 +2,11 @@ import React from 'react'
 
 import {
   Slide,
-  Appear,
   Layout,
   Fill,
   Heading,
   Text,
   Image,
-  List,
-  ListItem,
   Table,
   TableRow,
   TableItem
@@ -20,7 +17,7 @@ import preloader from 'spectacle/lib/utils/preloader'
 const images = {
   twitter: require('../assets/image/twitter.png'),
   github: require('../assets/image/github.png'),
-  email: require('../assets/image/email.png'),
+  email: require('../assets/image/email.png')
 }
 
 preloader(images)
@@ -113,7 +110,7 @@ export default [
       </Fill>
       <Fill>
         <Heading size={7} lineHeight={1} textFont='secondary' textColor='secondary' caps fill>
-          Nelson Nunes
+          Thomas Fumey
         </Heading>
         <Table margin='20px auto 0 auto'>
           <TableRow>
@@ -122,12 +119,12 @@ export default [
             </TableItem>
             <TableItem>
               <Text textAlign='left' textColor='tertiary' textSize={26} margin='0 0 10px 0'>
-                nelson.nunes@lyra-network.com
+                thomas.fumey@lyra-network.com
               </Text>
             </TableItem>
           </TableRow>
         </Table>
       </Fill>
     </Layout>
-  </Slide>,
+  </Slide>
 ]
