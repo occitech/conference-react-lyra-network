@@ -1,5 +1,13 @@
 import React from 'react'
-import {Slide, Heading, Text, Appear, CodePane, List, ListItem} from 'spectacle'
+import {
+  Slide,
+  Heading,
+  Text,
+  Appear,
+  CodePane,
+  List,
+  ListItem
+} from 'spectacle'
 import CodeSlide from 'spectacle-code-slide'
 
 export default [
@@ -144,5 +152,5 @@ export default [
     <Appear>
       <Text textColor='tertiary'><br />Procédural => Fonctionnel</Text>
     </Appear>
-  </Slide>,
+  </Slide>
 ]

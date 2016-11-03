@@ -1,5 +1,10 @@
 import React from 'react'
-import {Slide, Heading, Text, Appear, CodePane, List, ListItem, Image} from 'spectacle'
+import {
+  Slide,
+  Heading,
+  Text,
+  Appear
+} from 'spectacle'
 
 export default [
   <Slide key='4-0'>
@@ -23,5 +28,5 @@ export default [
   </Slide>,
   <Slide key='4-2'>
     <Text textColor='tertiary'>Comment gérer le multi-thème ?</Text>
-  </Slide>,
+  </Slide>
 ]

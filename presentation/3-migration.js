@@ -1,5 +1,13 @@
 import React from 'react'
-import {Slide, Heading, Text, Appear, CodePane, List, ListItem, Image} from 'spectacle'
+import {
+  Slide,
+  Heading,
+  Text,
+  Appear,
+  List,
+  ListItem,
+  Image
+} from 'spectacle'
 
 export default [
   <Slide key='3-0'>

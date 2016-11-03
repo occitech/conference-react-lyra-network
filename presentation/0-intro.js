@@ -22,7 +22,7 @@ const images = {
   companies: require('../assets/image/companies.png'),
   lyra_white: require('../assets/image/lyra-white.png'),
   lyra_color: require('../assets/image/lyra-color.jpg'),
-  occitech: require('../assets/image/occitech.png'),
+  occitech: require('../assets/image/occitech.png')
 }
 
 preloader(images)
@@ -40,7 +40,7 @@ export default [
     </Layout>
   </Slide>,
   <Slide key='0-2'>
-    <Image src={images.react.replace('/', '')} width={200} height={200}/>
+    <Image src={images.react.replace('/', '')} width={200} height={200} />
     <Heading size={2} lineHeight={1} textFont='secondary'>
       React
     </Heading>
@@ -68,20 +68,20 @@ export default [
       <Fill>
         <Table textAlign='right' margin='40px 0 0 0'>
           <tbody>
-          <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>Angular 2</Text></TableItem></TableRow>
-          <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>Ember</Text></TableItem></TableRow>
-          <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>Angular 1</Text></TableItem></TableRow>
-          <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>React + Redux</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>Angular 2</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>Ember</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>Angular 1</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 20px 0 0' textColor='tertiary'>React + Redux</Text></TableItem></TableRow>
           </tbody>
         </Table>
       </Fill>
       <Fill>
         <Table textAlign='left' margin='40px 0 0 0'>
           <tbody>
-          <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>764k minified</Text></TableItem></TableRow>
-          <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>435k</Text></TableItem></TableRow>
-          <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>143k</Text></TableItem></TableRow>
-          <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>151k minified</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>764k minified</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>435k</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>143k</Text></TableItem></TableRow>
+            <TableRow><TableItem><Text padding='0 0 0 20px' textColor='quartenary'>151k minified</Text></TableItem></TableRow>
           </tbody>
         </Table>
       </Fill>
@@ -91,7 +91,7 @@ export default [
     <Heading size={4} lineHeight={1} textFont='primary' textColor='secondary' caps>
       REACT, C&#39;EST DU SERIEUX
     </Heading>
-    <Image src={images.companies.replace('/', '')} display='block' margin='40px auto'/>
-    <Appear><Image src={images.lyra_color.replace('/', '')} display='block'/></Appear>
-  </Slide>,
+    <Image src={images.companies.replace('/', '')} display='block' margin='40px auto' />
+    <Appear><Image src={images.lyra_color.replace('/', '')} display='block' /></Appear>
+  </Slide>
 ]

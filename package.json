@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
-    "lint": "eslint --ext .js,.jsx .",
+    "lint": "standard",
     "deploy": "echo todo",
     "start": "cross-env NODE_ENV=development node server.js",
     "lint:fix": "standard --fix"
